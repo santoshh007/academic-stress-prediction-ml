@@ -74,6 +74,7 @@ notebook==7.6.1
 notebook-shim==0.2.4
 numba==0.66.0
 numpy==2.4.6
+nvidia-nccl-cu12==2.32.3
 openpyxl==3.1.5
 packaging==26.2
 pandas==3.0.5
