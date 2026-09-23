@@ -1,0 +1,5 @@
+stage,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std,note
+5-fold CV (train),0.6047619047619048,,0.5622222222222223,0.261769854624484,mean across 5 stratified folds on 31 training samples
+Held-out test (n=8),0.25,,0.26666666666666666,,single evaluation; highly sensitive to sample size
+Baseline (most frequent),0.386,0.068,0.184,0.023,reference floor
+git 

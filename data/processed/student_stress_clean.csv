@@ -1,0 +1,40 @@
+age,gender,university,program,year,cgpa,study_hours,attendance,assignment_stress,exam_count,sleep_hours,social_media,physical_activity,part_time_job,screen_time,financial_stress,social_support,stress_q1,stress_q2,stress_q3,stress_q4,stress_q5,stress_q6,stress_q7,stress_q8,stress_q9,stress_q10,academic_life_satisfaction,biggest_stress_reason,thought_break,career_stress,academic_performance
+20-22,Female,Tribhuvan University,BCA,4th Year,Not Available Yet,Less than 1,60–70%,2,1-2,5–6,5–6 hours,1–2 days/week,Yes,6–8 hours,4,5,2,1,5,3,3,3,2,2,5,4,4,Sudden Need of submission for project ,Never,5,4
+Above 25,Male,Other,BSc Nursing,3rd Year,3.0–3.49,3–4,Above 90%,3,5-6,7–8,More than 6 hours,1–2 days/week,Yes,More than 8 hours,4,1,3,2,3,4,3,3,4,2,2,4,2,"Expectations: There’s pressure to get good grades, meet course requirements, and sometimes live up to what family, teachers, or even I expect from myself. This constant need to perform well creates anxiety.",Never,4,2
+23-25,Male,Tribhuvan University,BE/B.Tech,4th Year,3.5–4.0,1–2,Above 90%,4,1-2,7–8,1–2 hours,Daily,No,3–5 hours,1,3,4,3,4,2,2,4,2,2,3,3,4,Capstone projects.,Rarely,5,4
+23-25,Male,Tribhuvan University,BCA,5th Year,3.0–3.49,1–2,Below 60%,1,More than 6,More than 8,3–4 hours,5–6 days/week,Yes,3–5 hours,1,1,1,1,1,1,5,1,5,5,1,5,5,Seen in many people about grading physiology pressure,Never,1,5
+Above 25,Male,Tribhuvan University,BSc CSIT,4th Year,Not Available Yet,1–2,71–80%,2,1-2,Less than 5,3–4 hours,3–4 days/week,Yes,Less than 3 hours,3,5,2,2,5,5,3,3,2,2,4,2,3,Money and education balancing part,Sometimes,1,3
+20-22,Male,Kathmandu University,BSc CSIT,2nd Year,3.0–3.49,3–4,81–90%,1,3-4,7–8,1–2 hours,3–4 days/week,No,3–5 hours,3,3,2,2,3,2,2,3,3,3,3,3,3,Study management,Rarely,3,3
+20-22,Female,Tribhuvan University,BE/B.Tech,4th Year,3.0–3.49,1–2,81–90%,3,1-2,7–8,3–4 hours,Never,No,6–8 hours,4,3,4,3,4,3,3,3,4,4,4,4,4,Assesment  ,Sometimes,3,4
+23-25,Male,Tribhuvan University,BCA,4th Year,3.0–3.49,Less than 1,71–80%,2,3-4,5–6,1–2 hours,1–2 days/week,No,3–5 hours,5,4,2,3,5,3,2,3,3,3,3,3,2, career concerns because I am unsure about job opportunities,Sometimes,5,2
+Above 25,Male,Tribhuvan University,BSc CSIT,4th Year,3.5–4.0,More than 6 hours,Above 90%,5,More than 6,7–8,3–4 hours,Daily,No,3–5 hours,3,3,3,5,3,3,3,3,3,3,3,3,3,Frustration ,Never,3,3
+23-25,Male,Tribhuvan University,BCA,4th Year,Not Available Yet,3–4,81–90%,4,More than 6,7–8,3–4 hours,1–2 days/week,No,More than 8 hours,5,4,5,5,5,5,3,5,3,3,5,4,4,multiple deadlines occur at the same time ,Often,4,4
+23-25,Female,Tribhuvan University,BCA,4th Year,3.5–4.0,Less than 1,81–90%,5,More than 6,More than 8,More than 6 hours,Never,No,More than 8 hours,5,1,1,5,1,1,4,3,3,4,2,3,5,Toppers because they score higher than me.,Very Often,5,4
+23-25,Male,Tribhuvan University,BCA,5th Year,3.0–3.49,Less than 1,Below 60%,1,More than 6,7–8,3–4 hours,5–6 days/week,Yes,6–8 hours,1,1,1,1,1,5,5,1,5,5,1,1,5,"Lack of discipline, not doing exercises ,more screen timing etc",Never,1,5
+Above 25,Male,Tribhuvan University,Agriculture,1st Year,3.5–4.0,Less than 1,Below 60%,5,1-2,7–8,1–2 hours,Never,No,More than 8 hours,5,2,5,5,1,3,5,5,5,3,5,5,5,"Career concerns, because the job market is highly competitive and uncertain",Rarely,4,5
+20-22,Male,Tribhuvan University,BCA,4th Year,Not Available Yet,Less than 1,71–80%,1,1-2,7–8,3–4 hours,3–4 days/week,No,3–5 hours,2,3,2,3,3,3,3,3,3,3,3,3,3,Deadlines ,Sometimes,3,3
+20-22,Female,Tribhuvan University,BSc Nursing,2nd Year,2.5–2.99,1–2,71–80%,2,3-4,7–8,3–4 hours,1–2 days/week,No,3–5 hours,3,2,2,3,3,3,4,3,3,4,2,4,3,Academic Assignment and money management,Rarely,4,4
+20-22,Female,Tribhuvan University,BBS,4th Year,2.5–2.99,1–2,81–90%,3,5-6,5–6,3–4 hours,Never,Yes,Less than 3 hours,5,3,1,1,2,2,3,1,1,1,1,1,1,"Because multiple deadlines occur at the same time , Future career concerns because I am unsure about job opportunities, Financial pressure because my family struggles to pay tuition.",Never,1,1
+20-22,Male,Tribhuvan University,BCA,4th Year,3.5–4.0,More than 6 hours,Above 90%,1,More than 6,Less than 5,Less than 1 hour,Daily,No,More than 8 hours,3,1,3,2,3,3,4,1,1,5,2,3,4,Assignment ,Sometimes,3,3
+20-22,Female,Pokhara University,BBS,4th Year,3.0–3.49,5–6,60–70%,2,3-4,5–6,1–2 hours,1–2 days/week,Yes,Less than 3 hours,2,2,1,1,5,1,4,3,3,5,4,4,3,Yes,Rarely,2,4
+20-22,Male,Rajarshi Janak University,MBBS,2nd Year,2.5–2.99,3–4,60–70%,1,3-4,5–6,1–2 hours,1–2 days/week,Yes,Less than 3 hours,2,4,5,2,2,2,4,3,3,3,3,3,3,Nooo,Rarely,4,2
+Above 25,Prefer not to say,Tribhuvan University,BIM,5th Year,3.5–4.0,1–2,Above 90%,4,More than 6,5–6,5–6 hours,1–2 days/week,No,6–8 hours,3,4,2,3,3,3,3,4,3,3,2,4,4,Multiple assignments ,Sometimes,5,3
+20-22,Male,Pokhara University,BDS,3rd Year,2.0–2.49,1–2,60–70%,2,3-4,7–8,1–2 hours,1–2 days/week,Yes,3–5 hours,2,2,2,3,2,2,2,3,3,3,2,2,2,Maybe,Often,3,4
+23-25,Female,Rajarshi Janak University,BHM,3rd Year,3.0–3.49,3–4,71–80%,1,5-6,7–8,3–4 hours,1–2 days/week,Yes,6–8 hours,2,3,3,3,3,3,3,5,3,4,4,4,3,Sometimes,Sometimes,4,3
+23-25,Female,Pokhara University,BSc Nursing,4th Year,2.5–2.99,1–2,60–70%,3,3-4,5–6,1–2 hours,1–2 days/week,No,3–5 hours,3,3,1,4,4,4,3,3,3,3,4,5,4,Yes,Sometimes,3,3
+Above 25,Prefer not to say,Agriculture and Forestry University,BSc Nursing,2nd Year,Not Available Yet,More than 6 hours,71–80%,5,1-2,More than 8,More than 6 hours,3–4 days/week,No,More than 8 hours,3,2,2,4,4,5,5,3,2,2,2,1,2,Future ,Often,4,3
+Above 25,Female,Sudurpaschim University,BHM,2nd Year,3.5–4.0,3–4,60–70%,3,More than 6,Less than 5,3–4 hours,1–2 days/week,Yes,6–8 hours,3,3,4,3,3,3,3,2,5,1,2,4,3,Ok,Sometimes,3,4
+17-19,Female,Sudurpaschim University,Agriculture,4th Year,3.0–3.49,5–6,81–90%,3,5-6,More than 8,5–6 hours,5–6 days/week,No,6–8 hours,3,2,3,3,4,4,4,4,2,1,1,1,4,Because ,Often,2,4
+23-25,Male,Purbanchal University,BSc CSIT,3rd Year,3.5–4.0,5–6,81–90%,4,5-6,5–6,1–2 hours,3–4 days/week,Yes,6–8 hours,3,2,3,3,3,3,4,4,4,4,4,3,2,Money,Sometimes,4,4
+Above 25,Prefer not to say,Rajarshi Janak University,Law(LLB),5th Year,3.5–4.0,5–6,60–70%,4,5-6,7–8,1–2 hours,3–4 days/week,No,6–8 hours,3,4,4,1,1,3,4,4,1,1,3,2,2,I,Sometimes,4,2
+Above 25,Female,Other,Agriculture,4th Year,3.5–4.0,1–2,81–90%,4,5-6,5–6,3–4 hours,5–6 days/week,Yes,Less than 3 hours,2,2,4,4,4,3,3,3,4,4,3,5,4,Financial pressure ,Sometimes,4,5
+17-19,Male,Purbanchal University,MBBS,2nd Year,2.5–2.99,3–4,60–70%,2,3-4,7–8,1–2 hours,1–2 days/week,Yes,3–5 hours,3,2,3,3,3,3,3,3,3,3,3,3,2,Family struggle ,Very Often,4,3
+17-19,Female,Sudurpaschim University,Law(LLB),3rd Year,3.0–3.49,3–4,60–70%,1,1-2,5–6,3–4 hours,3–4 days/week,No,6–8 hours,4,4,4,3,3,3,3,2,2,2,3,3,3,Future career,Sometimes,3,3
+23-25,Female,Kathmandu University,BDS,3rd Year,2.5–2.99,3–4,71–80%,1,5-6,5–6,3–4 hours,1–2 days/week,Yes,6–8 hours,2,2,2,2,2,3,3,3,3,3,4,3,3,Tuition ,Sometimes,2,2
+20-22,Female,Agriculture and Forestry University,Agriculture,4th Year,3.0–3.49,5–6,81–90%,3,3-4,5–6,1–2 hours,1–2 days/week,No,6–8 hours,2,2,2,4,4,4,4,3,3,5,4,1,2,Stress,Sometimes,3,3
+23-25,Female,Sudurpaschim University,MBBS,3rd Year,2.5–2.99,3–4,60–70%,1,3-4,5–6,3–4 hours,3–4 days/week,Yes,3–5 hours,3,2,1,3,4,5,3,2,3,2,2,4,3,Job ,Sometimes,3,2
+20-22,Female,Sudurpaschim University,BSc CSIT,2nd Year,2.5–2.99,1–2,71–80%,3,3-4,5–6,1–2 hours,3–4 days/week,Yes,3–5 hours,2,3,2,3,3,3,4,3,2,4,4,3,3,Financial ,Sometimes,2,2
+20-22,Female,Rajarshi Janak University,BDS,4th Year,2.5–2.99,3–4,71–80%,3,3-4,5–6,1–2 hours,1–2 days/week,Yes,3–5 hours,2,3,2,3,3,4,3,3,4,3,4,3,3,Career,Very Often,3,3
+23-25,Female,Sudurpaschim University,BDS,3rd Year,2.5–2.99,3–4,71–80%,2,3-4,5–6,5–6 hours,5–6 days/week,No,6–8 hours,2,1,1,1,3,2,3,2,3,3,2,2,2,Financial ,Sometimes,2,4
+23-25,Prefer not to say,Rajarshi Janak University,BSc CSIT,4th Year,2.5–2.99,1–2,Above 90%,1,3-4,5–6,3–4 hours,3–4 days/week,No,Less than 3 hours,2,2,3,4,2,2,4,4,4,4,3,4,2,Future ,Sometimes,2,4
+20-22,Female,Purbanchal University,MBBS,3rd Year,2.5–2.99,1–2,60–70%,2,3-4,5–6,1–2 hours,3–4 days/week,Yes,3–5 hours,1,3,3,2,4,3,3,2,4,3,3,3,2,Unsure ,Often,3,3
