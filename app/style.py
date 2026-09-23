@@ -310,7 +310,7 @@ def footer():
         """
         <div class="app-footer">
             Saroj Lamichhane · Santosh Shrestha · BCA Final-Year Project · Tribhuvan University <br>
-            <a href="https://github.com/iamsaroj2058/Academic-stress-prediction-ml"
+            <a href="https://github.com/santoshh007/academic-stress-prediction-ml"
                target="_blank" style="color:#8b1e3f;">View source on GitHub</a>
         </div>
         """,

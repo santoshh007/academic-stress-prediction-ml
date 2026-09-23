@@ -4,8 +4,7 @@ app.py — Streamlit web app for academic stress prediction.
 
 import os
 import sys
-import csv
-from datetime import datetime
+
 
 import streamlit as st
 
@@ -16,6 +15,7 @@ from utils import (
     ORDINAL_MAPPINGS,
     NOMINAL_CATEGORIES,
 )
+from db import insert_response, count_responses
 import style as ui
 
 # -----------------------------------------------------------------
@@ -266,28 +266,19 @@ def show_result_modal(user_input: dict, label: str, proba: dict):
 
     ui.render_help_card()
 
-    # --- Contribute to research ---
+
+       # --- Contribute to research ---
     st.markdown("---")
     if st.button("Contribute this response to research (anonymous)"):
-        save_path = os.path.join(
-            os.path.dirname(os.path.abspath(__file__)),
-            "collected_data", "responses.csv",
-        )
-        file_exists = os.path.exists(save_path)
-
-        record = dict(user_input)
-        record["predicted_label"] = label
-        record["timestamp"] = datetime.utcnow().isoformat()
-
-        os.makedirs(os.path.dirname(save_path), exist_ok=True)
-        with open(save_path, "a", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=record.keys())
-            if not file_exists:
-                writer.writeheader()
-            writer.writerow(record)
-
-        st.success("Response saved anonymously. Thank you.")
-
+        try:
+            row_id = insert_response(user_input, label)
+            total = count_responses()
+            st.success(
+                f"Response saved anonymously. Thank you. "
+                f"(Total contributions: {total})"
+            )
+        except Exception as e:
+            st.error(f"Could not save response: {e}")
 # -----------------------------------------------------------------
 # On submit → open the modal
 # -----------------------------------------------------------------
