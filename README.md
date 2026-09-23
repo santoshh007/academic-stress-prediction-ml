@@ -1336,13 +1336,13 @@ The complete system can be summarized as:
 
 # 👨‍💻 Author
 
-**Saroj Lamichhane**
+**Santosh Shrestha and Saroj Lamichhane**
 
 BCA (Bachelor of Computer Application)
 Tribhuvan University, Nepal
 
 GitHub:
-https://github.com/iamsaroj2058/Academic-stress-prediction-ml
+https://github.com/santoshh007/academic-stress-prediction-ml
 
 This project was developed as a **BCA final-year academic project** and is intended to serve as a foundation for further research into machine-learning approaches to academic stress among undergraduate students in Nepal.
 

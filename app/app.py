@@ -209,6 +209,6 @@ if submitted:
 # -----------------------------------------------------------------
 st.markdown("---")
 st.caption(
-    "Saroj Lamichhane and Santosh Shrestha · BCA Final-Year Project · Tribhuvan University · 2025–2026  \n"
-    "Code: github.com/iamsaroj2058/Academic-stress-prediction-ml"
+    "Santosh Shrestha and Saroj Lamichhane · BCA Final-Year Project · Tribhuvan University · 2025–2026  \n"
+    "https://github.com/santoshh007/academic-stress-prediction-ml"
 )
