@@ -33,3 +33,6 @@ app/collected_data/*.csv
 
 # Environment variables
 .env
+
+models/*_synthetic.pkl
+models/*_synthetic_metadata.json
