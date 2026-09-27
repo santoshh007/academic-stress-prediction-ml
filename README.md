@@ -1,74 +1,57 @@
-# 🧠 Machine Learning-Based Prediction of Academic Stress Among Undergraduate Students in Nepal
+# Machine Learning-Based Prediction of Academic Stress Among Undergraduate Students in Nepal
 
-[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python\&logoColor=white)](https://www.python.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange)](https://scikit-learn.org/)
-[![XGBoost](https://img.shields.io/badge/XGBoost-ML-red)](https://xgboost.readthedocs.io/)
-[![SHAP](https://img.shields.io/badge/XAI-SHAP-purple)](https://shap.readthedocs.io/)
-[![Streamlit](https://img.shields.io/badge/App-Streamlit-ff4b4b?logo=streamlit\&logoColor=white)](https://streamlit.io/)
-[![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite\&logoColor=white)](https://sqlite.org/)
-[![Status](https://img.shields.io/badge/Status-Research%20Prototype-yellow)](#-project-status)
+**BCA Final-Year Project — Tribhuvan University, Nepal**
 
-> **BCA Final-Year Project | Tribhuvan University, Nepal**
+This project looks at whether academic, lifestyle, demographic, and psychosocial factors can be used to predict academic stress among undergraduate students in Nepal.
 
-A survey-based machine learning research project investigating whether demographic, academic, lifestyle, and psychosocial factors can be used to predict **academic stress levels among undergraduate students in Nepal**.
+The project uses survey data and machine learning to classify stress into three levels:
 
-The system classifies responses into **Low, Moderate, and High** stress levels and includes data analysis, machine learning, SHAP explainability, error analysis, a Streamlit research prototype, and a synthetic-data pipeline validation experiment.
+* **Low**
+* **Moderate**
+* **High**
 
-> ⚠️ **Research Note:** The current genuine dataset contains only **39 responses**. Therefore, the real-data model is a **research prototype** and should not be considered a validated or clinically reliable stress-assessment system.
+It also includes SHAP-based model explanation, error analysis, and a Streamlit application for testing the prediction workflow.
+
+> **Note:** The current genuine dataset has only **39 responses**, so the real-data results are considered preliminary. A separate synthetic-data experiment was also carried out to test the pipeline with a larger dataset, but the synthetic results are not treated as real student findings.
 
 ---
 
-## 🎯 Objectives
+## Project Objectives
 
-* Analyze academic stress among undergraduate students.
-* Construct a stress score from 10 survey questions.
-* Categorize students into **Low / Moderate / High** stress levels.
-* Perform data cleaning, EDA, and feature engineering.
-* Compare multiple machine learning algorithms.
-* Evaluate model performance using cross-validation and held-out testing.
-* Investigate predictions using **SHAP**.
-* Perform error analysis.
-* Validate the ML pipeline using a larger synthetic dataset.
-* Develop an interactive Streamlit research prototype.
-* Support future research through anonymous response collection.
-
----
-
-## 🔬 Research Principle
-
-> **The data determines which features matter — not the researcher.**
-
-The project does not assume that a particular demographic, academic, lifestyle, or psychosocial factor causes academic stress.
-
-Model results are treated as exploratory evidence and require validation using a sufficiently large and representative real-world dataset.
+* Collect survey data from undergraduate students.
+* Create an academic stress score from the stress-related questions.
+* Classify responses into Low, Moderate, and High stress levels.
+* Explore the relationship between different survey features and the target.
+* Train and compare different machine learning models.
+* Evaluate model performance using cross-validation and test data.
+* Use SHAP to understand model predictions.
+* Analyze prediction errors.
+* Build a Streamlit-based research prototype.
+* Continue collecting genuine responses for future model improvement.
 
 ---
 
-## 📊 Dataset
+## Dataset
 
-### Real Survey Dataset
+The questionnaire was created using Google Forms and contains questions covering several areas.
 
-The real dataset was collected using the **Academic Stress Survey for Undergraduate Students**.
+| Category          | Examples                                                  |
+| ----------------- | --------------------------------------------------------- |
+| Demographics      | Age, gender, university, program, year                    |
+| Academic          | CGPA, study hours, attendance, assignments, exams         |
+| Lifestyle         | Sleep, social media, physical activity, screen time       |
+| Psychosocial      | Financial stress, social support, career stress           |
+| Stress assessment | 10 questions using a 1–5 frequency scale                  |
+| Other             | Academic satisfaction, performance, biggest stress reason |
 
-| Property             |                         Value |
-| -------------------- | ----------------------------: |
-| Genuine responses    |                        **39** |
-| Cleaned observations |                        **39** |
-| Cleaned variables    |                        **32** |
-| Final ML features    |                        **37** |
-| Target               |         Low / Moderate / High |
-| Collection method    |              Anonymous survey |
-| Planned dataset      | **300–500 genuine responses** |
+### Current Real Dataset
 
-### Main Feature Groups
+* **39 genuine responses**
+* **32 cleaned columns**
+* **37 final ML features**
+* Target: **Low / Moderate / High**
 
-* 👤 **Demographics:** age, gender, university, program, year, CGPA
-* 📚 **Academic:** study hours, attendance, assignment stress, exams
-* 🛌 **Lifestyle:** sleep, social media, physical activity, part-time job, screen time
-* 🧠 **Psychosocial:** financial stress, social support, career stress, academic satisfaction and performance
-* 📋 **Stress assessment:** 10 questions using a 1–5 frequency scale
-
-Four positively worded stress questions are reverse-scored:
+Four positively worded stress questions are reverse-scored before calculating the total stress score:
 
 ```text
 stress_q4
@@ -79,68 +62,72 @@ stress_q8
 reverse_score = 6 - original_score
 ```
 
+The current dataset is too small to make reliable claims about the undergraduate population of Nepal.
+
 ---
 
-## 🔄 Research Workflow
+## Project Workflow
 
 ```text
-Survey Data
-    ↓
+Survey Responses
+       ↓
 Data Understanding
-    ↓
+       ↓
 Data Cleaning
-    ↓
+       ↓
 Exploratory Data Analysis
-    ↓
-Stress Score Construction
-    ↓
-Low / Moderate / High Target
-    ↓
+       ↓
+Stress Score + Target
+       ↓
 Feature Engineering
-    ↓
+       ↓
 Model Training
-    ↓
-Cross-Validation + Test Evaluation
-    ↓
+       ↓
+Cross-Validation
+       ↓
+Test Evaluation
+       ↓
 SHAP Explainability
-    ↓
+       ↓
 Error Analysis
-    ↓
-Synthetic Pipeline Validation
-    ↓
-Streamlit Research Prototype
-    ↓
-Larger Genuine Data Collection
+       ↓
+Streamlit Application
+       ↓
+Larger Genuine Dataset
 ```
 
 ---
 
-## 🤖 Machine Learning
+## Machine Learning
 
-The project compares:
+The following models have been tested:
 
 * Decision Tree
 * Logistic Regression
 * Random Forest
-* K-Nearest Neighbors
+* KNN
 * XGBoost
-* Support Vector Machine
+* SVM
 * Naive Bayes
 * Dummy Classifier baseline
 
-### Real Data Results — n=39
+### Initial Results
 
-| Model               |       CV Accuracy |       CV Macro F1 |
-| ------------------- | ----------------: | ----------------: |
-| **Decision Tree**   | **0.605 ± 0.231** | **0.562 ± 0.262** |
-| Logistic Regression |     0.414 ± 0.146 |     0.389 ± 0.161 |
-| Random Forest       |     0.410 ± 0.185 |     0.364 ± 0.197 |
-| KNN                 |     0.381 ± 0.142 |     0.342 ± 0.163 |
-| XGBoost             |     0.381 ± 0.142 |     0.323 ± 0.159 |
-| SVM                 |     0.376 ± 0.209 |     0.292 ± 0.223 |
-| Naive Bayes         |     0.286 ± 0.181 |     0.291 ± 0.181 |
+The initial model training was performed using the genuine dataset (`n=39`).
 
-Held-out test performance:
+| Model               |   CV Accuracy |   CV Macro F1 |
+| ------------------- | ------------: | ------------: |
+| Decision Tree       | 0.605 ± 0.231 | 0.562 ± 0.262 |
+| Logistic Regression | 0.414 ± 0.146 | 0.389 ± 0.161 |
+| Random Forest       | 0.410 ± 0.185 | 0.364 ± 0.197 |
+| KNN                 | 0.381 ± 0.142 | 0.342 ± 0.163 |
+| XGBoost             | 0.381 ± 0.142 | 0.323 ± 0.159 |
+| SVM                 | 0.376 ± 0.209 | 0.292 ± 0.223 |
+| Naive Bayes         | 0.286 ± 0.181 | 0.291 ± 0.181 |
+
+The Decision Tree had the highest cross-validation Macro F1 in the initial experiment.
+
+However, its held-out test performance was:
 
 ```text
 Test Accuracy : 0.250
@@ -148,55 +135,47 @@ Test Macro F1 : 0.267
 Baseline      : 0.386
 ```
 
-The difference between cross-validation and held-out testing indicates substantial uncertainty and possible overfitting in the current small dataset.
+This large difference between cross-validation and test performance is one of the main reasons the current model should not be considered reliable yet.
 
 ---
 
-## 🧪 Synthetic Pipeline Validation
+## Synthetic Pipeline Experiment
 
-A separate **1,000-row synthetic dataset** was used to examine how the existing ML pipeline behaves with a substantially larger sample.
+After seeing the limitations of the 39-response dataset, I also created a separate **1,000-row synthetic dataset**.
 
-> ⚠️ **Synthetic data is not real student data and is not used as evidence about academic stress among students in Nepal.**
+The purpose of this experiment was not to create research evidence about students. It was mainly to check how the existing preprocessing and ML pipeline behaves when there are substantially more samples.
 
-| Property               |                        Value |
-| ---------------------- | ---------------------------: |
-| Dataset size           |               **1,000 rows** |
-| Training samples       |                      **800** |
-| Purpose                |  Pipeline/scaling validation |
-| Source                 | LLM-generated synthetic data |
-| Real research evidence |                       **No** |
+### Results
 
-### 5-Fold CV — Macro F1
+| Model               | Real Data | Synthetic Data |
+| ------------------- | --------: | -------------: |
+| Random Forest       |     0.364 |      **0.744** |
+| Logistic Regression |     0.389 |      **0.737** |
+| XGBoost             |     0.323 |      **0.736** |
+| SVM                 |     0.292 |      **0.724** |
+| Decision Tree       |     0.562 |      **0.707** |
+| Naive Bayes         |     0.291 |      **0.669** |
+| KNN                 |     0.342 |      **0.588** |
+| Baseline            |     0.184 |          0.170 |
 
-| Model               |      Real | Synthetic | Difference |
-| ------------------- | --------: | --------: | ---------: |
-| Random Forest       |     0.364 | **0.744** |     +0.380 |
-| Logistic Regression |     0.389 | **0.737** |     +0.348 |
-| XGBoost             |     0.323 | **0.736** |     +0.413 |
-| SVM                 |     0.292 | **0.724** |     +0.432 |
-| Decision Tree       |     0.562 | **0.707** |     +0.145 |
-| Naive Bayes         |     0.291 | **0.669** |     +0.378 |
-| KNN                 |     0.342 | **0.588** |     +0.246 |
-| Baseline            |     0.184 |     0.170 |          — |
-| **Mean**            | **0.366** | **0.701** | **+0.335** |
+These results show that the pipeline can produce much more stable results when working with a larger dataset under the synthetic-data conditions.
 
-![Real vs Synthetic Comparison](figures/real_vs_synthetic_comparison.png)
+However, **synthetic performance should not be interpreted as expected performance on real students**. The next step is therefore to collect more genuine survey responses and run the same pipeline again.
 
-### Interpretation
+The synthetic work is kept separate from the real-data workflow:
 
-The experiment demonstrates that the same processing and modeling pipeline can be executed on a much larger dataset and produces more stable model estimates under the synthetic data conditions.
-
-However, because the synthetic observations were generated rather than collected from students, these results **cannot be interpreted as expected real-world performance**.
-
-The experiment therefore supports the decision to collect a substantially larger **genuine dataset** before drawing conclusions from the model.
+```text
+data/synthetic/
+notebooks_synthetic/
+```
 
 ---
 
-## 🧠 Explainable AI
+## SHAP Explainability
 
-The project uses **SHAP TreeExplainer** to investigate model predictions.
+SHAP is used to inspect which features are influencing individual model predictions.
 
-Generated outputs include:
+The project generates:
 
 ```text
 figures/
@@ -208,24 +187,26 @@ figures/
 └── real_vs_synthetic_comparison.png
 ```
 
-SHAP results from the current real dataset are treated as **exploratory** because of the small sample size.
+The SHAP results from the current 39-response dataset are treated cautiously because the sample is too small for stable conclusions.
 
 ---
 
-## 🌐 Streamlit Research Prototype
+## Streamlit Application
 
-The project includes an interactive Streamlit application.
+A Streamlit application is being developed as a research prototype.
 
-### Features
+Current functionality includes:
 
-* Interactive survey form
-* Low / Moderate / High prediction
-* Stress-level visualization
+* Survey input form
+* Stress prediction
+* Low / Moderate / High result
 * Personalized suggestions
 * Feature-based recommendations
-* Research limitation warnings
-* Optional anonymous research contribution
-* SQLite response storage
+* Research limitation information
+* Optional anonymous response contribution
+* SQLite-based response storage
+
+Project structure:
 
 ```text
 app/
@@ -238,11 +219,11 @@ app/
     └── responses.db
 ```
 
-> ⚠️ The application is a research prototype and is **not a medical or psychological diagnostic tool**.
+The application is intended for research and demonstration purposes. It is **not a medical or psychological diagnostic tool**.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 academic-stress-prediction-ml/
@@ -289,34 +270,34 @@ academic-stress-prediction-ml/
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-| Category         | Technology               |
+| Area             | Technology               |
 | ---------------- | ------------------------ |
-| Language         | Python 3.12              |
+| Programming      | Python 3.12              |
 | Environment      | uv + virtual environment |
-| Data Processing  | pandas, NumPy            |
+| Data             | pandas, NumPy            |
 | Visualization    | Matplotlib, Seaborn      |
 | Machine Learning | scikit-learn, XGBoost    |
-| Explainable AI   | SHAP                     |
-| Web Application  | Streamlit                |
+| Explainability   | SHAP                     |
+| Web App          | Streamlit                |
 | Database         | SQLite                   |
 | Notebooks        | Jupyter                  |
-| IDE              | VS Code                  |
+| Development      | VS Code                  |
 | Version Control  | Git + GitHub             |
 
 ---
 
-## 🚀 Reproducibility
+## Running the Project
 
-### Clone
+### Clone the repository
 
 ```bash
 git clone https://github.com/iamsaroj2058/Academic-stress-prediction-ml.git
 cd Academic-stress-prediction-ml
 ```
 
-### Create Environment
+### Create the environment
 
 ```bash
 uv venv ml --python 3.12
@@ -334,26 +315,28 @@ Windows:
 ml\Scripts\activate
 ```
 
-### Install Dependencies
+### Install dependencies
 
 ```bash
 uv pip install -r requirements.txt
 ```
 
-### Run Real-Data Notebooks
+### Run the notebooks
+
+Run the real-data notebooks in order:
 
 ```text
 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08
 ```
 
-### Run Synthetic Validation
+The synthetic experiment is kept separately:
 
 ```text
 notebooks_synthetic/
 01 → 02 → 03 → 04 → 05
 ```
 
-### Run Streamlit
+### Run the Streamlit app
 
 ```bash
 streamlit run app/app.py
@@ -361,103 +344,86 @@ streamlit run app/app.py
 
 ---
 
-## 🚧 Project Status
+## Current Status
 
-| Task                                        | Status          |
-| ------------------------------------------- | --------------- |
-| Literature review                           | ✅ Completed     |
-| Proposal defense                            | ✅ Completed     |
-| Questionnaire design                        | ✅ Completed     |
-| Initial genuine data collection             | ✅ Completed     |
-| Data cleaning                               | ✅ Completed     |
-| EDA                                         | ✅ Completed     |
-| Stress-target construction                  | ✅ Completed     |
-| Feature engineering                         | ✅ Completed     |
-| Model training                              | ✅ Completed     |
-| Model evaluation                            | ✅ Completed     |
-| SHAP explainability                         | ✅ Completed     |
-| Error analysis                              | ✅ Completed     |
-| Streamlit prototype                         | ✅ Implemented   |
-| Personalized suggestions                    | ✅ Completed     |
-| SQLite response storage                     | ✅ Completed     |
-| **Synthetic pipeline validation (n=1,000)** | ✅ **Completed** |
-| Larger genuine data collection              | 🔄 Ongoing      |
-| Research paper                              | ⏳ Planned       |
-| Public deployment                           | ⏳ Planned       |
+| Work                            | Status     |
+| ------------------------------- | ---------- |
+| Literature review               | ✅          |
+| Proposal defense                | ✅          |
+| Questionnaire                   | ✅          |
+| Initial genuine data collection | ✅          |
+| Data cleaning                   | ✅          |
+| EDA                             | ✅          |
+| Stress target construction      | ✅          |
+| Feature engineering             | ✅          |
+| Model training                  | ✅          |
+| Model evaluation                | ✅          |
+| SHAP analysis                   | ✅          |
+| Error analysis                  | ✅          |
+| Streamlit prototype             | ✅          |
+| Personalized suggestions        | ✅          |
+| SQLite response storage         | ✅          |
+| Synthetic pipeline experiment   | ✅          |
+| Larger genuine data collection  | 🔄 Ongoing |
+| Research paper                  | ⏳ Planned  |
+| Public deployment               | ⏳ Planned  |
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
-* The genuine dataset currently contains only **39 responses**.
-* There are **37 ML features**, giving a high feature-to-sample ratio.
-* The held-out test set contains only **8 observations**.
-* Cross-validation and test performance differ substantially.
+The main limitation at the moment is the size of the genuine dataset.
+
+* Only **39 genuine responses** are currently available.
+* There are **37 ML features**.
+* The test set contains only **8 samples**.
+* The current model shows a noticeable generalization gap.
 * Survey responses are self-reported.
-* The current sample is not representative of Nepal's undergraduate population.
-* No external validation has been performed.
-* SHAP explanations may be unstable at the current sample size.
-* The synthetic dataset is generated data and cannot replace genuine observations.
+* The sample is not representative of all undergraduate students in Nepal.
+* External validation has not yet been performed.
+* SHAP results may be unstable with the current sample.
+* Synthetic data cannot replace genuine survey responses.
 
-> **The synthetic experiment is a pipeline-validation exercise, not evidence of real-world prediction performance.**
+Because of these limitations, the current results are considered **preliminary**.
 
 ---
 
-## 🔮 Future Work
+## Future Work
 
-1. Collect **300–500 genuine responses**.
-2. Improve representation across universities, programs, regions, and academic years.
-3. Re-run the complete ML pipeline on the larger genuine dataset.
+The main next step is to collect **300–500 genuine responses** and repeat the complete analysis.
+
+Other planned work includes:
+
+1. Collect more responses from different universities and programs.
+2. Improve representation across regions and academic years.
+3. Re-train and compare the models using the larger real dataset.
 4. Investigate feature selection and regularization.
-5. Explore continuous stress-score regression.
-6. Investigate feature interactions using genuine data.
+5. Explore stress-score regression.
+6. Study feature interactions using genuine data.
 7. Perform external validation.
 8. Continue improving the Streamlit application.
-9. Prepare the project for research-paper publication.
+9. Prepare the research paper.
 
 ---
 
-## 🔐 Ethical Considerations
-
-* Participation is voluntary.
-* Survey responses are intended to remain anonymous.
-* Data are collected for academic/research purposes.
-* Synthetic data is clearly separated from genuine survey data.
-* The application does not provide medical or psychological diagnosis.
-* Predictions should not be used for high-stakes decisions.
-* Future data collection will follow appropriate consent and privacy practices.
-
----
-
-## 👨‍💻 Author
+## Author
 
 **Saroj Lamichhane**
 
-BCA (Bachelor of Computer Application) Final-Year Student
+BCA Final-Year Student
 Tribhuvan University, Nepal
 
-🔗 **GitHub:**
+GitHub:
 https://github.com/iamsaroj2058/Academic-stress-prediction-ml
 
 ---
 
-## 📄 License
+## License
 
-This project is intended for **academic and research use**.
+This project is intended for **academic and research purposes**.
 
-The current model is a research prototype and must not be used for:
-
-* Mental-health diagnosis
-* Medical assessment
-* Treatment decisions
-* High-stakes decisions about students
+The current model is a research prototype and should not be used for medical diagnosis, treatment decisions, or other high-stakes decisions.
 
 ---
 
-### ⭐ Project Status
-
-> **Research Prototype — Machine Learning + Explainable AI + Streamlit + Synthetic Pipeline Validation**
-
-The project currently includes a complete initial ML workflow, SHAP explainability, error analysis, a Streamlit prototype, anonymous SQLite response collection, and a separate synthetic-data experiment for pipeline validation.
-
-The next major research phase is **collecting and validating a larger genuine dataset** before making substantive conclusions about academic stress among undergraduate students in Nepal.
+> **Project status:** Research prototype — Machine Learning + SHAP + Streamlit + Synthetic Pipeline Validation
