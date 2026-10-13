@@ -36,3 +36,8 @@ app/collected_data/*.csv
 
 models/*_synthetic.pkl
 models/*_synthetic_metadata.json
+Project Demo/
+*.mkv
+*.mp4
+*.mov
+*.avi
